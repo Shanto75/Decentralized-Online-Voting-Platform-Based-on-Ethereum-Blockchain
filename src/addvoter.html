@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voter and Candidate Information</title>
+
+  <!-- Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
+
+<body>
+  
+<!--Navigation bar-->
+<div id="navbar"></div>
+<!--end of Navigation bar-->
+
+  <div style="background: url(addvoter.jpg)" class="img-fluid page-holder bg-cover">
+    <div class="container">
+      <h1 class="pt-5 text-center text-dark">New Voter Registration</h1>
+      <h5 id="accountAddress" class="p-3 m-5 bg-warning text-center text-dark rounded-pill"></h5>
+      <!-- <div class="p-5 m-5 bg-success text-white text-center">
+          <h5 class="p-2 m-2">Voter and Candidate Count</h5>
+          <p id="voter"></p>
+          <p id="candidate"></p>
+        </div> -->
+
+      <!-- <p id="voterlist" class="text-center bg-dark text-white p-5 m-5"></p> -->
+      <!-- 
+      <div class="m-5 p-5">
+        <table class="table text-center">
+          <h1 class="text-center text-white">Voter List</h1>
+          <thead class="bg-warning">
+            <tr>
+              <th scope="col">Serial No.</th>
+              <th scope="col">NID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">City</th>
+              <th scope="col">Voted</th>
+            </tr>
+          </thead>
+          <tbody id="voterlist" class="bg-light"></tbody>
+        </table>
+
+      </div>
+
+      <div class="m-5 p-5">
+        <table class="table text-center">
+          <h1 class="text-center text-white">Candidate List</h1>
+          <thead class="bg-warning">
+            <tr>
+              <th scope="col">Serial No.</th>
+              <th scope="col">NID</th>
+              <th scope="col">Name</th>
+              <th scope="col">City</th>
+              <th scope="col">Vote Count</th>
+            </tr>
+          </thead>
+          <tbody id="candidatelist" class="bg-light"></tbody>
+        </table>
+
+      </div> -->
+
+
+
+      <div class="row py-3">
+        <div class="col-md-6 mx-auto pb-5">
+          <h1 class="py-3 mb-5 text-center text-dark bg-success  rounded-pill">Enter Voter Details</h1>
+          <form onSubmit="App.setvoter()">
+            <div class="col-md-10 mx-auto">
+              <input id="nid" type="number" class="form-control mb-3" placeholder="Enter nid" required />
+              <input id="name" type="text" class="form-control mb-3" placeholder="Enter name" required />
+              <input id="email" type="text" class="form-control mb-3" placeholder="Enter email" required />
+              <input id="age" type="number" class="form-control mb-3" placeholder="Enter age" required />
+              <input id="city" type="text" class="form-control mb-3" placeholder="Enter city" required />
+              <input id="pass" type="text" class="form-control mb-3" placeholder="Enter Password" required />
+              <button type="submit" class="btn btn-primary">submit</button>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="col">
+          <h1 class="m-5 p-3 text-center text-dark bg-warning  rounded-pill">Add New Candidate</h1>
+          <form onSubmit="App.setcandidate()">
+            <div class="col-md-10 mx-auto">
+              <input id="candinid" type="number" class="form-control mb-3" placeholder="Enter nid" required>
+              <input id="candiname" type="text" class="form-control mb-3" placeholder="Enter name" required>
+              <input id="candicity" type="text" class="form-control mb-3" placeholder="Enter city" required>
+              <button type="submit" class="btn btn-primary">submit</button>
+            </div>
+          </form>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/addvoter.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script>
+      $(function () {
+          $("#navbar").load("navbar.html");
+      });
+  </script>
+</body>
+
+</html>

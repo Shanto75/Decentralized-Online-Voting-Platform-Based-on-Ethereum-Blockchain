@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <style>
+    .page-holder {
+      min-height: 100vh;
+    }
+
+    .bg-cover {
+      background-size: cover !important;
+    }
+  </style>
+  <title>Admin Login</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+  <!--Navigation bar-->
+  <div id="navbar"></div>
+  <!--end of Navigation bar-->
+
+  <div style="background: url(login.jpg)" class="img-fluid page-holder bg-cover">
+
+    <div class="container-fluid bg-gradient">
+      <h1 id="error" class="p-2 text-danger text-center"></h1>
+      <h1 class="p-5 text-center">Admin LogIn</h1>
+      <div class="col-md-4 mx-auto">
+        <!-- <h1 class="py-3 mb-5 text-center text-dark bg-success  rounded-pill">Enter Voter Details</h1> -->
+        <form onSubmit="App.adminlogin()">
+          <div class="col-md-10 mx-auto">
+            <input id="email" name="name" type="email" class="form-control mb-3" placeholder="Enter Email" required />
+            <input id="pass" name="pass" type="password" class="form-control mb-3" placeholder="Enter Password" required />
+            <button type="submit" class="btn btn-primary">submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="adminlogin.js"></script>
+  <script>
+    $(function () {
+      $("#navbar").load("navbar.html");
+    });
+  </script>
+</body>
+
+</html>
